@@ -39,7 +39,7 @@ void compute(const FullEnvironment& env){
 
     gettimeofday(&timevalNow, NULL);
     if (env.fullRank() == 0){
-        cout<<"\nBeginning run of 'Example 1: Log-Normal Distribution Function (0.5,.2)' example at "<<ctime(&timevalNow.tv_sec)<<endl;
+        cout<<"\nBeginning run of 'Example 2: Normal Distribution Function (3,.4)' example at "<<ctime(&timevalNow.tv_sec)<<endl;
     }  
     env.fullComm().Barrier();
     env.subComm().Barrier();
@@ -128,7 +128,7 @@ void compute(const FullEnvironment& env){
     ip.solveWithBayesMetropolisHastings(NULL, paramInitials, &proposalCovMatrix);
     cerr<<"]"<<endl;
     if (env.fullRank() == 0) {
-        cout << "Ending run of 'Example 1: Log-Normal Distribution Function (0.5,.2)' example at "
+        cout << "Ending run of 'Example 2: Normal Distribution Function (3,.4)' example at "
               << ctime(&timevalNow.tv_sec)
               << std::endl;
     }
